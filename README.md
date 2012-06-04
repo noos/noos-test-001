@@ -1,5 +1,6 @@
-mHaml: Reusable Modular Template for Rapid Mobile Webapp Development
---------------------------------------------------------------------
+# mHaml: Reusable Modular Template for Rapid Mobile Webapp Development
+
+----
 
 ## What Is It?
 mHaml extends capabilities of [Haml](http://haml.info/), which is the most beautiful and succinct way to generate clean, semantic markup.  With mHaml, new templates can be created by defining relationships between existing templates.  mHaml makes mobile webapp development [Haml](http://haml.info)-ish.
