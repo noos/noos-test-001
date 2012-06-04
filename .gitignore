@@ -1,0 +1,17 @@
+.env
+log/
+
+*.swp
+*.swo
+*~
+.DS_Store
+
+__WIP
+__old
+__*
+
+.sass-cache
+.sass-cache/*
+
+
+ruby.exe.stackdump
