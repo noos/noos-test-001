@@ -1,7 +1,7 @@
 mHaml: Reusable Modular Template for Rapid Mobile Webapp Development
 ====================================================================
 
-# What Is It?
+## What Is It?
 mHaml extends capabilities of [Haml](http://haml.info/), which is the most beautiful and succinct way to generate clean, semantic markup.  With mHaml, new templates can be created by defining relationships between existing templates.  mHaml makes mobile webapp development [Haml](http://haml.info)-ish.
 
 mHaml is built on three core principles:
@@ -16,10 +16,11 @@ mHaml is a template writing template. mHaml lets you define templates based on e
 mHaml is non-obstrusive and minimal. mHaml is best used with [Sinatra](http://www.sinatrarb.com/intro) (or even stand-alone). mHaml is code generating code.
 
 
-# Why?
+## Why?
 Don't you wish concise outline was all it took to represent a web page? [Haml](http://haml.info/) does just that. In fact, content should remain this way: concise and semantic. Regardless of representation, across different styles, across browsers, and even across mobile devices. And [jQuery Mobile](http://jquerymobile.com/) does just that: insulate against differences in mobile devices. With agaile framework Sinatra and free deployment service Heroku, it may just be possible to create a webapp targeting multiple mobile devices with just a simple outline! Or you thought...
 
 > [Haml] works wonders for generating clean, semantic markup.
+>
 > 'Are you using Haml?' — Obie Fernandez
 
 JHS ([jQuery Mobile](http://jquerymobile.com) / [Haml](http://haml.info) / [Sinatra](http://www.sinatrarb.com/intro) ) combination unfortunately does not play well together. Haml tags don't work with [jQuery Mobile](http://jquerymobile.com/). Haml page based separation also don't work well with [jQuery Mobile](http://jquerymobile.com/). pipes lexical binding hygienic macro of Scheme language and dependency injection of Spring framework.
