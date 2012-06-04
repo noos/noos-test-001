@@ -1,0 +1,134 @@
+%html
+  %head
+    %meta{ :charset => "utf-8" }
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1"}
+    %title MONAD
+    %link{:rel => "stylesheet", :href => "/css/jquery.mobile-1.1.0.css"}
+    %script{ :src => "/js/jquery.js"}
+    %script{ :src => "/js/jquery.mobile-1.1.0.js"}
+    %script{ :src => "/js/maps.js"}
+    :javascript
+      var map;
+      function initMap() {
+          /*
+          var template = 'http://{S}tile.openstreetmap.org/{Z}/{X}/{Y}.png';
+          var subdomains = [ '', 'a.', 'b.', 'c.' ];
+          //var provider = new com.modestmaps.TemplatedLayer(template, subdomains);
+          var provider = new com.modestmaps.MapProvider(function(c) {
+              var img = [ c.zoom, c.column, c.row ].join('/') + '.png';
+              //return 'http://tile.openstreetmap.org/' + img;
+              //return "http://192.168.0.10:5000/test.png";
+          });
+
+          var provider = new com.modestmaps.TemplatedMapProvider("http://192.168.0.10:5000/test.png");
+
+          map = new com.modestmaps.Map('map',
+            provider,
+            null, [
+              new com.modestmaps.TouchHandler(),
+              new com.modestmaps.MouseHandler()
+            ]);
+          map.setCenterZoom(new com.modestmaps.Location(37.811530, -122.2666097), 14);
+
+
+          $("#map").height(500);
+
+          */
+
+          //var layer = new MM.MapProvider(function(coord) {
+          var layer = new MM.Layer(new MM.MapProvider(function(coord) {
+              //var img = parseInt(coord.zoom) +'-r'+ parseInt(coord.row) +'-c'+ parseInt(coord.column) + '.jpg';
+              //return 'http://osm-bayarea.s3.amazonaws.com/' + img;
+
+              //return "http://192.168.0.10:5000/test.png";
+              //return "http://127.0.0.1/test.png";
+
+              //return "http://127.0.0.1/test.jpg";
+              return "http://127.0.0.1/bb.html";
+          }));
+
+            //new MM.Point(900,900)
+            // null, [
+          //map = new MM.Map('map',
+          //  layer,
+          //  new MM.Point(900,900),
+          //  [
+          //    new com.modestmaps.TouchHandler(),
+          //    new com.modestmaps.MouseHandler()
+          //  ]);
+          map = new MM.Map('map',
+            layer,
+            {x:300, y:300}
+          );
+          //map.tileSize = {x:1280, y: 800};
+
+          //var f = new MM.Follower(map, new MM.Location(37.811530, -122.2666097), '&#xB0; Broadway and Grand');
+          //var f = new MM.Follower(map, new MM.Location(37.811530, -122.2666097), '° Broadway and Grand');
+          map.setCenterZoom(new MM.Location(37.811530, -122.2666097), 14);
+
+
+
+      }
+      //$(function(){
+      //  initMap();
+      //})
+    :css
+      html, body, #map {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          border: 0;
+      }
+      .map-tile {
+        opacity:0;
+      }
+      .map-tile-loaded {
+        -webkit-animation-name: 'fade-in';
+        -webkit-animation-timing-function: ease-in;
+        -webkit-animation-duration: 0.2s;
+      }
+      @-webkit-keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+  %body
+    #page1{:"data-role" => "page"}
+      %div{:"data-role" => "header"}
+        %h1 SPREAD&reg;
+      %div{:"data-role" => "content"}
+        %a{:"data-role" => "button", :href => "#", :onclick => "initMap();"} tilemap
+        %a{:"data-role" => "button", :href => "http://re.spre.ad/keb/rid/1"} canvas
+        %a{:"data-role" => "button", :href => "http://spre.ad"} home
+        /%ul{:"data-role" => "listview"}
+        /  /%li{:"data-icon" => "false"}
+        /  /  %a{:href => "#page2"} page2
+        /  /%li{:"data-icon" => "info"}
+        /  /  %a{:href => "/c2"} c2
+        /  %li
+        /    %a{:href => "#", :onclick => "initMap();"} test map
+        /  /%video{:width => 200, :height => 200, :src => "/test.3gp", :preload => "metadata", :poster => "/css/images/ajax-loader.gif"}/
+        /  /%video{:width => 200, :height => 200, :src => "/test.mov", :autoplay => "true"}/
+        /  /<video width="199" height="159" src="http://www.example.com/mymovie.m4v" />
+        /  /%iframe{:width => "300", :height => "300", :scrolling => "no", :src => "http://localhost/"}
+      /#div_frame{:style => "position:relative;"}
+      /  #div_hidden{:style => "position:absolute; left:0px; top:0px; overflow:scroll; width:100; height:100"}
+      /    %img{:src => "/test.png"}
+      /%audio{:src => "/0001.mp3", :controls => "true"}/
+      #map
+      %div{:"data-role" => "footer"}
+        %h4 &copy; 2012 Monad
+
+
+    /#page2{:"data-role" => "page"}
+    /  %div{:"data-role" => "header"}
+    /    %h1 Hello
+    /    %a{:href => "#"} Prev
+    /  %div{:"data-role" => "content"}
+    /    %a{:href => "#page1"} page 1
+
+
