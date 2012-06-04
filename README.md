@@ -1,4 +1,5 @@
-mHaml: Reusable Modular Template for Rapid Mobile Webapp Development
+# mHaml
+Reusable Modular Template for Rapid Mobile Webapp Development
 ====================================================================
 
 ## What Is It?
