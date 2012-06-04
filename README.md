@@ -23,3 +23,5 @@ Majority of [jQuery Mobile](http://jquerymobile.com) tags are regular HTML5 tags
 
 For the same [reason multiple inheritance (the entire inheritance business, for that matter) was eschewed for the sake of composition](http://en.wikipedia.org/wiki/Composition_over_inheritance), mHaml deliberately forsakes partials. mHaml, instead, lets you define templates based on templates, like [hygienic macro](http://en.wikipedia.org/wiki/Hygienic_macro) of Scheme language. As a result, you can dynamically plug in templates into templates, much like [dependency injection](http://en.wikipedia.org/wiki/Dependency_injection) of Spring framework. And, lexical binding, of course.
 
+### More info
+Check out [mHaml.com](http://www.mhaml.com) for more info.
